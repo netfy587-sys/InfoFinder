@@ -1,0 +1,224 @@
+<!-- 
+  ROOTS OF HISTORY — Plants That Shaped Human History (Timeline Style)
+  Paste this entire block into an Elementor "HTML" widget (or a Custom HTML section).
+  Layout: vertical alternating timeline with a vintage parchment feel — 
+  a new topic (history/folklore, not biology or care) and a new structure 
+  versus the previous two plant pages.
+  Photos below use Lorem Picsum (free-to-use placeholders) — swap the <img src="..."> 
+  links with your own photography before publishing.
+-->
+<style>
+  .roh-wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-family: 'Palatino Linotype', Georgia, serif;
+    color: #3b2f22;
+    background: #f4ecdc;
+    line-height: 1.75;
+  }
+  .roh-hero {
+    text-align: center;
+    padding: 64px 0 30px;
+  }
+  .roh-eyebrow {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #8c5a2b;
+    margin-bottom: 16px;
+  }
+  .roh-hero h1 {
+    font-size: 40px;
+    font-weight: 400;
+    margin: 0 0 16px;
+  }
+  .roh-hero p {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    color: #6d5a44;
+    max-width: 540px;
+    margin: 0 auto;
+  }
+  .roh-hero-img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-top: 30px;
+    filter: sepia(20%);
+  }
+
+  /* Timeline */
+  .roh-timeline {
+    position: relative;
+    margin: 70px 0;
+    padding-left: 0;
+  }
+  .roh-timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #c9a876;
+    transform: translateX(-50%);
+  }
+  .roh-item {
+    display: grid;
+    grid-template-columns: 1fr 60px 1fr;
+    align-items: start;
+    margin-bottom: 60px;
+    position: relative;
+  }
+  .roh-item .roh-dot {
+    grid-column: 2;
+    width: 16px;
+    height: 16px;
+    background: #8c5a2b;
+    border: 3px solid #f4ecdc;
+    border-radius: 50%;
+    justify-self: center;
+    margin-top: 6px;
+    z-index: 1;
+  }
+  .roh-item .roh-content {
+    background: #fffaf0;
+    border: 1px solid #e3d3ae;
+    border-radius: 6px;
+    padding: 24px;
+  }
+  .roh-item.roh-left .roh-content { grid-column: 1; text-align: right; }
+  .roh-item.roh-right .roh-content { grid-column: 3; text-align: left; }
+  .roh-item.roh-right .roh-dot { grid-row: 1; }
+  .roh-era {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #8c5a2b;
+    margin-bottom: 8px;
+  }
+  .roh-content h2 {
+    font-size: 23px;
+    font-weight: 400;
+    margin: 0 0 6px;
+  }
+  .roh-content .roh-latin {
+    font-style: italic;
+    font-size: 13px;
+    color: #9c8262;
+    margin-bottom: 14px;
+  }
+  .roh-content img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 14px;
+  }
+  .roh-content p {
+    font-size: 15px;
+    color: #3f3222;
+    margin-bottom: 0;
+  }
+
+  .roh-footer-note {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: #9c8262;
+    text-align: center;
+    padding: 40px 0 60px;
+    border-top: 1px solid #e3d3ae;
+    margin-top: 20px;
+  }
+
+  @media (max-width: 720px) {
+    .roh-timeline::before { left: 20px; }
+    .roh-item { grid-template-columns: 40px 1fr; }
+    .roh-item .roh-dot { grid-column: 1; margin-top: 4px; }
+    .roh-item.roh-left .roh-content,
+    .roh-item.roh-right .roh-content { grid-column: 2; text-align: left; }
+    .roh-hero h1 { font-size: 28px; }
+  }
+</style>
+
+<div class="roh-wrap">
+
+  <!-- HERO -->
+  <div class="roh-hero">
+    <div class="roh-eyebrow">Roots of History</div>
+    <h1>Five Plants That Quietly Changed the Course of Human History</h1>
+    <p>Long before laboratories or empires, plants were already shaping trade routes, wars, medicine, and daily life — often more than the history books give them credit for.</p>
+    <img class="roh-hero-img" src="https://picsum.photos/id/1076/1100/650" alt="An old botanical illustration style garden">
+  </div>
+
+  <!-- TIMELINE -->
+  <div class="roh-timeline">
+
+    <div class="roh-item roh-left">
+      <div class="roh-content">
+        <div class="roh-era">Circa 2700 BCE — China</div>
+        <h2>Tea</h2>
+        <div class="roh-latin">Camellia sinensis</div>
+        <img src="https://picsum.photos/id/225/500/350" alt="Tea leaves being harvested">
+        <p>Legend credits its discovery to a stray leaf falling into a pot of boiling water. True or not, tea went on to shape entire trade economies, fund empires, and — centuries later — play a direct role in events as significant as the founding tensions of the American Revolution.</p>
+      </div>
+      <div class="roh-dot"></div>
+    </div>
+
+    <div class="roh-item roh-right">
+      <div class="roh-dot"></div>
+      <div class="roh-content">
+        <div class="roh-era">1493 — The Americas to Europe</div>
+        <h2>The Potato</h2>
+        <div class="roh-latin">Solanum tuberosum</div>
+        <img src="https://picsum.photos/id/292/500/350" alt="Freshly harvested potatoes in soil">
+        <p>Brought back to Europe after early transatlantic voyages, the potato was initially viewed with suspicion — some believed it caused disease. Within a couple of centuries, it had become a staple crop reliable enough to support major population growth across much of Europe, precisely because it grew well in poor soil where grain often failed.</p>
+      </div>
+    </div>
+
+    <div class="roh-item roh-left">
+      <div class="roh-content">
+        <div class="roh-era">1630s — The Netherlands</div>
+        <h2>The Tulip</h2>
+        <div class="roh-latin">Tulipa</div>
+        <img src="https://picsum.photos/id/106/500/350" alt="A field of colorful tulips">
+        <p>A flower, of all things, once triggered one of the earliest recorded speculative market bubbles. At the height of "tulip mania," a single rare bulb reportedly traded for more than the price of a house — a strange, vivid reminder of how quickly value can become detached from the object itself.</p>
+      </div>
+      <div class="roh-dot"></div>
+    </div>
+
+    <div class="roh-item roh-right">
+      <div class="roh-dot"></div>
+      <div class="roh-content">
+        <div class="roh-era">1600s — South America</div>
+        <h2>Cinchona Bark</h2>
+        <div class="roh-latin">Cinchona officinalis</div>
+        <img src="https://picsum.photos/id/1080/500/350" alt="Tree bark close-up">
+        <p>Long used by indigenous communities in the Andes, the bark of this tree contains quinine — the first effective treatment against malaria known to European medicine. Its discovery quietly reshaped which regions of the world colonial powers could occupy for extended periods, by removing one of the deadliest obstacles to doing so.</p>
+      </div>
+    </div>
+
+    <div class="roh-item roh-left">
+      <div class="roh-content">
+        <div class="roh-era">1492 onward — The Americas to the World</div>
+        <h2>The Chili Pepper</h2>
+        <div class="roh-latin">Capsicum annuum</div>
+        <img src="https://picsum.photos/id/431/500/350" alt="Dried red chili peppers">
+        <p>Native to the Americas, the chili pepper spread across the globe within roughly a century of European contact — remarkably fast for a plant with no prior presence in Asia, Africa, or Europe. Today, cuisines that feel inseparable from chili heat, from parts of India to Thailand, all adopted the plant only after this relatively recent introduction.</p>
+      </div>
+      <div class="roh-dot"></div>
+    </div>
+
+  </div>
+
+  <div class="roh-footer-note">
+    Notes on the plants that quietly moved through history alongside us.
+  </div>
+
+</div>
