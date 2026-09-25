@@ -1,224 +1,301 @@
 <!-- 
-  ROOTS OF HISTORY — Plants That Shaped Human History (Timeline Style)
+  LEAF & LIGHT — An Indoor Plant Care Guide (Care-Card Style)
   Paste this entire block into an Elementor "HTML" widget (or a Custom HTML section).
-  Layout: vertical alternating timeline with a vintage parchment feel — 
-  a new topic (history/folklore, not biology or care) and a new structure 
-  versus the previous two plant pages.
+  Layout: quick-care icon row + plant profile card grid + long-form care sections —
+  a new structure and topic angle (care, not botany) versus the previous plant page.
   Photos below use Lorem Picsum (free-to-use placeholders) — swap the <img src="..."> 
-  links with your own photography before publishing.
+  links with your own plant photography before publishing.
 -->
 <style>
-  .roh-wrap {
-    max-width: 900px;
+  .lnl-wrap {
+    max-width: 1080px;
     margin: 0 auto;
     padding: 0 20px;
-    font-family: 'Palatino Linotype', Georgia, serif;
-    color: #3b2f22;
-    background: #f4ecdc;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #2b2118;
+    background: #fdf8f2;
     line-height: 1.75;
   }
-  .roh-hero {
+  .lnl-hero {
     text-align: center;
     padding: 64px 0 30px;
   }
-  .roh-eyebrow {
-    font-family: Arial, sans-serif;
+  .lnl-eyebrow {
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 4px;
     text-transform: uppercase;
-    color: #8c5a2b;
+    color: #b6693a;
     margin-bottom: 16px;
   }
-  .roh-hero h1 {
+  .lnl-hero h1 {
     font-size: 40px;
-    font-weight: 400;
+    font-weight: 800;
     margin: 0 0 16px;
+    letter-spacing: -0.5px;
   }
-  .roh-hero p {
-    font-family: Arial, sans-serif;
-    font-size: 15px;
-    color: #6d5a44;
+  .lnl-hero p {
+    font-size: 16px;
+    color: #6b5c4d;
     max-width: 540px;
     margin: 0 auto;
   }
-  .roh-hero-img {
+  .lnl-hero-img {
     width: 100%;
-    height: 340px;
+    height: 360px;
     object-fit: cover;
-    border-radius: 4px;
+    border-radius: 10px;
     margin-top: 30px;
-    filter: sepia(20%);
   }
 
-  /* Timeline */
-  .roh-timeline {
-    position: relative;
-    margin: 70px 0;
-    padding-left: 0;
-  }
-  .roh-timeline::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: #c9a876;
-    transform: translateX(-50%);
-  }
-  .roh-item {
+  /* Quick care principles row */
+  .lnl-principles {
     display: grid;
-    grid-template-columns: 1fr 60px 1fr;
-    align-items: start;
-    margin-bottom: 60px;
-    position: relative;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin: 50px 0 60px;
   }
-  .roh-item .roh-dot {
-    grid-column: 2;
-    width: 16px;
-    height: 16px;
-    background: #8c5a2b;
-    border: 3px solid #f4ecdc;
-    border-radius: 50%;
-    justify-self: center;
-    margin-top: 6px;
-    z-index: 1;
+  .lnl-principle {
+    background: #f4e9dc;
+    border-radius: 10px;
+    padding: 22px 16px;
+    text-align: center;
   }
-  .roh-item .roh-content {
-    background: #fffaf0;
-    border: 1px solid #e3d3ae;
-    border-radius: 6px;
-    padding: 24px;
+  .lnl-principle-icon {
+    font-size: 26px;
+    margin-bottom: 10px;
   }
-  .roh-item.roh-left .roh-content { grid-column: 1; text-align: right; }
-  .roh-item.roh-right .roh-content { grid-column: 3; text-align: left; }
-  .roh-item.roh-right .roh-dot { grid-row: 1; }
-  .roh-era {
-    font-family: Arial, sans-serif;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: #8c5a2b;
-    margin-bottom: 8px;
-  }
-  .roh-content h2 {
-    font-size: 23px;
-    font-weight: 400;
+  .lnl-principle h4 {
+    font-size: 14px;
     margin: 0 0 6px;
+    color: #2b2118;
   }
-  .roh-content .roh-latin {
-    font-style: italic;
-    font-size: 13px;
-    color: #9c8262;
-    margin-bottom: 14px;
-  }
-  .roh-content img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 4px;
-    margin-bottom: 14px;
-  }
-  .roh-content p {
-    font-size: 15px;
-    color: #3f3222;
-    margin-bottom: 0;
+  .lnl-principle p {
+    font-size: 12px;
+    color: #7a6a5a;
+    margin: 0;
   }
 
-  .roh-footer-note {
-    font-family: Arial, sans-serif;
+  /* Plant profile card grid */
+  .lnl-section-title {
     font-size: 12px;
-    color: #9c8262;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #b6693a;
+    margin: 60px 0 24px;
+    text-align: center;
+  }
+  .lnl-profiles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+    margin-bottom: 60px;
+  }
+  .lnl-profile-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(43,33,24,0.08);
+  }
+  .lnl-profile-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+  }
+  .lnl-profile-body {
+    padding: 18px;
+  }
+  .lnl-profile-body h3 {
+    font-size: 18px;
+    margin: 0 0 4px;
+  }
+  .lnl-profile-latin {
+    font-size: 12px;
+    font-style: italic;
+    color: #9c8b78;
+    margin-bottom: 12px;
+  }
+  .lnl-profile-stats {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+  }
+  .lnl-stat-pill {
+    font-size: 11px;
+    background: #f4e9dc;
+    color: #8a5432;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+  }
+  .lnl-profile-body p {
+    font-size: 14px;
+    color: #4a3d31;
+    margin: 0;
+  }
+
+  /* Long-form care sections */
+  .lnl-longform {
+    border-top: 2px solid #e9dcc9;
+    padding-top: 50px;
+  }
+  .lnl-care-section {
+    margin-bottom: 48px;
+  }
+  .lnl-care-section h2 {
+    font-size: 25px;
+    font-weight: 800;
+    margin: 0 0 14px;
+  }
+  .lnl-care-section p {
+    font-size: 16px;
+    color: #362b21;
+    margin-bottom: 16px;
+  }
+  .lnl-care-section img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 10px 0 20px;
+  }
+  .lnl-tip {
+    background: #f4e9dc;
+    border-left: 4px solid #b6693a;
+    padding: 16px 20px;
+    border-radius: 4px;
+    font-size: 15px;
+    color: #5c4327;
+    margin: 20px 0;
+  }
+
+  .lnl-footer-note {
+    font-size: 12px;
+    color: #a4917c;
     text-align: center;
     padding: 40px 0 60px;
-    border-top: 1px solid #e3d3ae;
-    margin-top: 20px;
+    border-top: 1px solid #e9dcc9;
+    margin-top: 40px;
   }
 
-  @media (max-width: 720px) {
-    .roh-timeline::before { left: 20px; }
-    .roh-item { grid-template-columns: 40px 1fr; }
-    .roh-item .roh-dot { grid-column: 1; margin-top: 4px; }
-    .roh-item.roh-left .roh-content,
-    .roh-item.roh-right .roh-content { grid-column: 2; text-align: left; }
-    .roh-hero h1 { font-size: 28px; }
+  @media (max-width: 800px) {
+    .lnl-principles { grid-template-columns: 1fr 1fr; }
+    .lnl-profiles { grid-template-columns: 1fr; }
+    .lnl-hero h1 { font-size: 28px; }
+    .lnl-hero-img, .lnl-care-section img { height: 200px; }
   }
 </style>
 
-<div class="roh-wrap">
+<div class="lnl-wrap">
 
   <!-- HERO -->
-  <div class="roh-hero">
-    <div class="roh-eyebrow">Roots of History</div>
-    <h1>Five Plants That Quietly Changed the Course of Human History</h1>
-    <p>Long before laboratories or empires, plants were already shaping trade routes, wars, medicine, and daily life — often more than the history books give them credit for.</p>
-    <img class="roh-hero-img" src="https://picsum.photos/id/1076/1100/650" alt="An old botanical illustration style garden">
+  <div class="lnl-hero">
+    <div class="lnl-eyebrow">Leaf &amp; Light</div>
+    <h1>A Practical Guide to Keeping Indoor Plants Alive</h1>
+    <p>Clear, no-nonsense care information for common houseplants — light, water, humidity, and the mistakes that quietly kill most of them.</p>
+    <img class="lnl-hero-img" src="https://picsum.photos/id/1076/1200/700" alt="A bright room filled with indoor plants">
   </div>
 
-  <!-- TIMELINE -->
-  <div class="roh-timeline">
-
-    <div class="roh-item roh-left">
-      <div class="roh-content">
-        <div class="roh-era">Circa 2700 BCE — China</div>
-        <h2>Tea</h2>
-        <div class="roh-latin">Camellia sinensis</div>
-        <img src="https://picsum.photos/id/225/500/350" alt="Tea leaves being harvested">
-        <p>Legend credits its discovery to a stray leaf falling into a pot of boiling water. True or not, tea went on to shape entire trade economies, fund empires, and — centuries later — play a direct role in events as significant as the founding tensions of the American Revolution.</p>
-      </div>
-      <div class="roh-dot"></div>
+  <!-- QUICK PRINCIPLES -->
+  <div class="lnl-principles">
+    <div class="lnl-principle">
+      <div class="lnl-principle-icon">☀️</div>
+      <h4>Light</h4>
+      <p>Match the plant to the actual light in the room, not the light you wish it had</p>
     </div>
-
-    <div class="roh-item roh-right">
-      <div class="roh-dot"></div>
-      <div class="roh-content">
-        <div class="roh-era">1493 — The Americas to Europe</div>
-        <h2>The Potato</h2>
-        <div class="roh-latin">Solanum tuberosum</div>
-        <img src="https://picsum.photos/id/292/500/350" alt="Freshly harvested potatoes in soil">
-        <p>Brought back to Europe after early transatlantic voyages, the potato was initially viewed with suspicion — some believed it caused disease. Within a couple of centuries, it had become a staple crop reliable enough to support major population growth across much of Europe, precisely because it grew well in poor soil where grain often failed.</p>
-      </div>
+    <div class="lnl-principle">
+      <div class="lnl-principle-icon">💧</div>
+      <h4>Water</h4>
+      <p>Check the soil before watering — most houseplants die from too much, not too little</p>
     </div>
-
-    <div class="roh-item roh-left">
-      <div class="roh-content">
-        <div class="roh-era">1630s — The Netherlands</div>
-        <h2>The Tulip</h2>
-        <div class="roh-latin">Tulipa</div>
-        <img src="https://picsum.photos/id/106/500/350" alt="A field of colorful tulips">
-        <p>A flower, of all things, once triggered one of the earliest recorded speculative market bubbles. At the height of "tulip mania," a single rare bulb reportedly traded for more than the price of a house — a strange, vivid reminder of how quickly value can become detached from the object itself.</p>
-      </div>
-      <div class="roh-dot"></div>
+    <div class="lnl-principle">
+      <div class="lnl-principle-icon">🌬️</div>
+      <h4>Airflow</h4>
+      <p>Stagnant air invites pests and fungal issues far more than a gentle draft</p>
     </div>
+    <div class="lnl-principle">
+      <div class="lnl-principle-icon">🪴</div>
+      <h4>Pot Size</h4>
+      <p>A pot too large for the roots holds excess water and often does more harm than good</p>
+    </div>
+  </div>
 
-    <div class="roh-item roh-right">
-      <div class="roh-dot"></div>
-      <div class="roh-content">
-        <div class="roh-era">1600s — South America</div>
-        <h2>Cinchona Bark</h2>
-        <div class="roh-latin">Cinchona officinalis</div>
-        <img src="https://picsum.photos/id/1080/500/350" alt="Tree bark close-up">
-        <p>Long used by indigenous communities in the Andes, the bark of this tree contains quinine — the first effective treatment against malaria known to European medicine. Its discovery quietly reshaped which regions of the world colonial powers could occupy for extended periods, by removing one of the deadliest obstacles to doing so.</p>
+  <!-- PLANT PROFILES -->
+  <div class="lnl-section-title">Common Houseplant Profiles</div>
+  <div class="lnl-profiles">
+
+    <div class="lnl-profile-card">
+      <img src="https://picsum.photos/id/1082/500/400" alt="A snake plant in a pot">
+      <div class="lnl-profile-body">
+        <h3>Snake Plant</h3>
+        <div class="lnl-profile-latin">Dracaena trifasciata</div>
+        <div class="lnl-profile-stats">
+          <span class="lnl-stat-pill">Low Light OK</span>
+          <span class="lnl-stat-pill">Water Rarely</span>
+        </div>
+        <p>Tolerates neglect better than almost any common houseplant. Root rot from overwatering is the main risk, not underwatering.</p>
       </div>
     </div>
 
-    <div class="roh-item roh-left">
-      <div class="roh-content">
-        <div class="roh-era">1492 onward — The Americas to the World</div>
-        <h2>The Chili Pepper</h2>
-        <div class="roh-latin">Capsicum annuum</div>
-        <img src="https://picsum.photos/id/431/500/350" alt="Dried red chili peppers">
-        <p>Native to the Americas, the chili pepper spread across the globe within roughly a century of European contact — remarkably fast for a plant with no prior presence in Asia, Africa, or Europe. Today, cuisines that feel inseparable from chili heat, from parts of India to Thailand, all adopted the plant only after this relatively recent introduction.</p>
+    <div class="lnl-profile-card">
+      <img src="https://picsum.photos/id/1084/500/400" alt="A pothos plant with trailing vines">
+      <div class="lnl-profile-body">
+        <h3>Pothos</h3>
+        <div class="lnl-profile-latin">Epipremnum aureum</div>
+        <div class="lnl-profile-stats">
+          <span class="lnl-stat-pill">Medium Light</span>
+          <span class="lnl-stat-pill">Forgiving</span>
+        </div>
+        <p>A good first plant — trailing vines signal thirst by drooping slightly, then recover quickly once watered.</p>
       </div>
-      <div class="roh-dot"></div>
+    </div>
+
+    <div class="lnl-profile-card">
+      <img src="https://picsum.photos/id/1069/500/400" alt="A fiddle leaf fig plant near a window">
+      <div class="lnl-profile-body">
+        <h3>Fiddle Leaf Fig</h3>
+        <div class="lnl-profile-latin">Ficus lyrata</div>
+        <div class="lnl-profile-stats">
+          <span class="lnl-stat-pill">Bright Light</span>
+          <span class="lnl-stat-pill">Sensitive</span>
+        </div>
+        <p>Dislikes being moved or drafted on. Consistency matters more than perfection with this one.</p>
+      </div>
     </div>
 
   </div>
 
-  <div class="roh-footer-note">
-    Notes on the plants that quietly moved through history alongside us.
+  <!-- LONG-FORM CARE SECTIONS -->
+  <div class="lnl-longform">
+
+    <div class="lnl-care-section">
+      <h2>Reading Light Correctly, Not Just Estimating It</h2>
+      <img src="https://picsum.photos/id/1076/1100/600" alt="Sunlight streaming through a window onto plants">
+      <p>Most plant care instructions describe light in vague terms — "bright indirect light," "low light" — without explaining how to actually measure it in a real room. A simple, reliable trick: hold a hand about a foot above the leaves in the middle of the day. A sharp, defined shadow usually means direct or very bright light. A soft, fuzzy shadow means moderate indirect light. No visible shadow at all usually means the spot is too dim for most flowering or fast-growing species.</p>
+      <div class="lnl-tip">Tip: a plant stretching toward a window with unusually long gaps between leaves is a common sign it's not getting enough light, even if it still looks green and alive.</div>
+      <p>Light exposure also changes with the seasons, sometimes dramatically. A spot that was bright and sunny in summer can become quite dim by winter as the sun's angle drops — a common, often-missed reason a plant that thrived for months suddenly starts struggling.</p>
+    </div>
+
+    <div class="lnl-care-section">
+      <h2>Why Overwatering Kills More Plants Than Underwatering</h2>
+      <img src="https://picsum.photos/id/1082/1100/600" alt="Watering a potted plant with a small can">
+      <p>It's a counterintuitive fact for most new plant owners: far more houseplants die from too much water than too little. Roots need oxygen as much as they need moisture, and soil that stays constantly wet effectively drowns them, creating the conditions for root rot — a slow, often invisible failure until the leaves start yellowing.</p>
+      <p>A simple habit avoids most of this: check the soil with a finger before watering, rather than watering on a fixed schedule. If the top inch or two is still damp, it usually isn't time yet, regardless of what a calendar reminder says.</p>
+    </div>
+
+    <div class="lnl-care-section">
+      <h2>Humidity Matters More Than Most People Assume</h2>
+      <img src="https://picsum.photos/id/1084/1100/600" alt="A humid greenhouse full of green plants">
+      <p>Many popular houseplants originate from tropical environments with humidity levels far higher than the average heated or air-conditioned home. Dry indoor air, especially common in winter, can cause crispy leaf edges and slowed growth even when light and watering are both handled correctly.</p>
+      <p>Grouping plants together, using a small humidifier, or simply avoiding spots directly next to heating vents can make a noticeable difference — often more than any amount of fertilizer or repotting.</p>
+    </div>
+
+  </div>
+
+  <div class="lnl-footer-note">
+    Practical, plain-language notes on keeping houseplants healthy.
   </div>
 
 </div>
